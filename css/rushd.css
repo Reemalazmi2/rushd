@@ -54,14 +54,14 @@
     font-size: 70px;
 }
 
-.cafe-button{
+.facility-button{
     background-color: rgba(240, 248, 255, 0);
     border: none;
     margin: 0;
     cursor: pointer;
 }
 
-.cafe-icon{
+.facility-icon{
     height: 80px;
 }
 

@@ -1,33 +1,54 @@
-export const facility = [{
+export const facilities = [{
   id: 'cafe',
-  image:"./img/cafe-coffee-cup-svgrepo-com.svg",
+  image:"../img/cafe-coffee-cup-svgrepo-com.svg",
   title: 'مقهى'
 }, {
   id: 'restaurant',
-  image: "./img/restaurant-svgrepo-com.svg",
+  image: "../img/restaurant-svgrepo-com.svg",
   title: 'مطعم'
 }, {
   id: 'store',
-  image:"./img/shop-cart-svgrepo-com.svg",
+  image:"../img/shop-cart-svgrepo-com.svg",
   title: 'بقالة'
 }, {
   id: 'mosque',
-  image:"./img/pray-day-svgrepo-com.svg",
+  image:"../img/pray-day-svgrepo-com.svg",
   title: 'مصلى'
 }, {
   id: 'stadium',
-  image:"./img/basketball-svgrepo-com.svg",
+  image:"../img/basketball-svgrepo-com.svg",
   title: 'ملعب كرة السلة'
 }, {
   id: 'stadium',
-  image:"./img/football-svgrepo-com.svg",
+  image:"../img/football-svgrepo-com.svg",
   title: 'ملعب كرة القدم'
 }, {
   id: 'stadium',
-  image:"./img/gym-svgrepo-com.svg",
+  image:"../img/gym-svgrepo-com.svg",
   title: ' الصالة الرياضية'
 }, {
   id: 'hospital',
-  image:"./img/hospital-svgrepo-com.svg",
+  image:"../img/hospital-svgrepo-com.svg",
   title: ' المستشفى الجامعي '
 }]
+
+function renderFacility() {
+  let facilityHTML = '';
+
+  facilities.forEach((facility) => {
+    facilityHTML += `
+      <button class="facility-button">
+          <img class="facility-icon" src=${facility.image}>
+          <div class="icon-title">
+              ${facility.title}
+          </div>
+      </button>
+    `;
+  });
+
+  document.querySelector('.js-bottom-section')
+    .innerHTML = facilityHTML;
+}
+
+renderFacility();
+
