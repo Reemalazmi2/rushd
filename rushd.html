@@ -4,9 +4,9 @@
         <title>
             Rushd
         </title>
-        <link rel="stylesheet" href="css/rushd.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/rushd.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     </head>
@@ -14,8 +14,10 @@
         <div id="map" class="map"></div>
         <script type="module" src="script/map.js"></script>
         <div class="Main-sec">
+            
             <div class="top-section">
-                <input class="Searchbar" type="text" placeholder="ادخل رقم القاعة">
+                <input class="Searchbar " id="searchInput" type="text" placeholder="ادخل رقم القاعة">
+                <ul id="searchList"></ul>
                 <button class="search-button">
                     <img class="search-icon" src="img/search.svg">
                 </button>            

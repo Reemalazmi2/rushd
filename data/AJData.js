@@ -112,7 +112,8 @@ export const uniFacility = {
         "marker-color": "#fd0808",
         "marker-size": "medium",
         "marker-symbol": "grocery",
-        "facility": "grocery"
+        "facility": "grocery",
+        "name": ""
       },
       "geometry": {
         "coordinates": [
@@ -120,7 +121,8 @@ export const uniFacility = {
           27.56395918925496
         ],
         "type": "Point"
-      }
+      },
+      "id": 3
     },
     {
       "type": "Feature",
@@ -128,7 +130,8 @@ export const uniFacility = {
         "marker-color": "#fd0808",
         "marker-size": "medium",
         "marker-symbol": "grocery",
-        "facility": "grocery"
+        "facility": "grocery",
+        "name": ""
       },
       "geometry": {
         "coordinates": [
@@ -136,7 +139,8 @@ export const uniFacility = {
           27.5632763469238
         ],
         "type": "Point"
-      }
+      },
+      "id": 4
     },
     {
       "type": "Feature",
@@ -144,7 +148,8 @@ export const uniFacility = {
         "marker-color": "#009dff",
         "marker-size": "medium",
         "marker-symbol": "cafe",
-        "facility": "cafe"
+        "facility": "cafe",
+        "name": ""
       },
       "geometry": {
         "coordinates": [
@@ -152,7 +157,8 @@ export const uniFacility = {
           27.56373336578548
         ],
         "type": "Point"
-      }
+      },
+      "id": 5
     },
     {
       "type": "Feature",
@@ -160,7 +166,8 @@ export const uniFacility = {
         "marker-color": "#009dff",
         "marker-size": "medium",
         "marker-symbol": "cafe",
-        "facility": "cafe"
+        "facility": "cafe",
+        "name": ""
       },
       "geometry": {
         "coordinates": [
@@ -168,7 +175,8 @@ export const uniFacility = {
           27.563636509563196
         ],
         "type": "Point"
-      }
+      },
+      "id": 6
     },
     {
       "type": "Feature",
@@ -176,7 +184,8 @@ export const uniFacility = {
         "marker-color": "#009dff",
         "marker-size": "medium",
         "marker-symbol": "cafe",
-        "facility": "cafe"
+        "facility": "cafe",
+        "name": ""
       },
       "geometry": {
         "coordinates": [
@@ -184,7 +193,8 @@ export const uniFacility = {
           27.563210850138745
         ],
         "type": "Point"
-      }
+      },
+      "id": 7
     },
     {
       "type": "Feature",
@@ -192,7 +202,8 @@ export const uniFacility = {
         "marker-color": "#009dff",
         "marker-size": "medium",
         "marker-symbol": "cafe",
-        "facility": "cafe"
+        "facility": "cafe",
+        "name": ""
       },
       "geometry": {
         "coordinates": [
@@ -200,7 +211,8 @@ export const uniFacility = {
           27.561985365360883
         ],
         "type": "Point"
-      }
+      },
+      "id": 8
     },
     {
       "type": "Feature",
@@ -217,7 +229,8 @@ export const uniFacility = {
           27.56195020894404
         ],
         "type": "Point"
-      }
+      },
+      "id": 9
     },
     {
       "type": "Feature",
@@ -302,7 +315,8 @@ export const uniFacility = {
           27.56170721010487
         ],
         "type": "Point"
-      }
+      },
+      "id": 14
     },
     {
       "type": "Feature",
@@ -564,7 +578,8 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      }
+      },
+      "id": 22
     },
     {
       "type": "Feature",
@@ -572,7 +587,8 @@ export const uniFacility = {
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "restaurant",
-        "facility": "restaurant"
+        "facility": "restaurant",
+        "name": ""
       },
       "geometry": {
         "coordinates": [
@@ -580,7 +596,8 @@ export const uniFacility = {
           27.563460071190363
         ],
         "type": "Point"
-      }
+      },
+      "id": 23
     },
     {
       "type": "Feature",

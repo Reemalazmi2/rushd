@@ -11,8 +11,8 @@ L.tileLayer('https://api.maptiler.com/maps/satellite/{z}/{x}/{y}.jpg?key=dHw0UMI
 function LookForFacility() {
   document.querySelectorAll('.js-look-for-facility')
     .forEach((button) => {
-      button.addEventListener('click', function() {
-        const facilityId = button.getAttribute('data-facility-id'); // الحصول على id المرفق من زر الضغط
+      button.addEventListener('click', () => {
+        const facilityId = button.getAttribute('data-facility-id'); 
 
         // إزالة جميع الطبقات السابقة من الخريطة
         map.eachLayer(layer => {
@@ -46,5 +46,32 @@ function LookForFacility() {
 // استدعاء الوظيفة
 LookForFacility();
 
+function renderFacilities(facilities) {
+  const searchList = document.getElementById('searchList');
+  searchList.innerHTML = '';// مسح القائمة السابقة
+  facilities.forEach((facility) => {
+      const li = document.createElement('li');
+      li.textContent = facility.properties.name; // إضافة اسم المرفق إلى القائمة
+      searchList.appendChild(li); // التأكد من أن searchList هو عنصر صالح
+  });
+}
 
+document.addEventListener('DOMContentLoaded', () => {
+  // لا تعرض أي مرافق عند التحميل
 
+  // إضافة مستمع للبحث
+  document.getElementById('searchInput')
+    .addEventListener('keyup', function() {
+      const searchValue = this.value.toLowerCase(); // الحصول على قيمة البحث وتحويلها إلى حروف صغيرة
+
+      if (searchValue) {
+          const filteredFacilities = uniFacility.features.filter( facility => {
+              const facilityName = facility.properties.name; // الحصول على الاسم
+              return typeof facilityName === 'string' && facilityName.toLowerCase().includes(searchValue);
+          });
+          renderFacilities(filteredFacilities); // إعادة عرض المرافق المفلترة
+      } else {
+          renderFacilities([]); // عرض قائمة فارغة إذا كان حقل البحث فارغًا
+      }
+    });
+});
