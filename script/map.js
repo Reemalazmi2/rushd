@@ -52,9 +52,51 @@ function renderFacilities(facilities) {
   facilities.forEach((facility) => {
       const li = document.createElement('li');
       li.textContent = facility.properties.name; // إضافة اسم المرفق إلى القائمة
+      li.onclick = function() {
+        showBuilding(facility);
+      };
       searchList.appendChild(li); // التأكد من أن searchList هو عنصر صالح
   });
 }
+
+
+
+function showBuilding(facility) {
+  const facilityId = facility.properties.id;
+
+  // إزالة جميع طبقات GeoJSON السابقة من الخريطة
+  map.eachLayer(layer => {
+      if (layer instanceof L.GeoJSON) {
+          map.removeLayer(layer);
+      }
+  });
+
+  // تصفية الميزات بناءً على الـ id
+  const filteredFeatures = uniFacility.features.filter(feature => {
+      return feature.properties.id === facilityId;
+  });
+
+  if (filteredFeatures.length > 0) {
+      // إضافة GeoJSON المفلتر إلى الخريطة
+      const geojsonLayer = L.geoJSON({
+          type: 'FeatureCollection',
+          features: filteredFeatures
+      }).addTo(map);
+
+      // تعيين العرض بناءً على نوع الهندسة
+      const geometryType = filteredFeatures[0].geometry.type;
+
+      if (geometryType === 'Point') {
+          map.fitBounds(geojsonLayer.getBounds()); // تعيين العرض للنقطة بمستوى تكبير أكبر
+      } else if (geometryType === 'Polygon') {
+          // ضبط الخريطة لتناسب حدود المضلع
+          map.fitBounds(geojsonLayer.getBounds());
+      }
+  } else {
+      console.log('لا توجد ميزات تطابق الـ id المحدد.');
+  }
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
   // لا تعرض أي مرافق عند التحميل
@@ -65,13 +107,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const searchValue = this.value.toLowerCase(); // الحصول على قيمة البحث وتحويلها إلى حروف صغيرة
 
       if (searchValue) {
-          const filteredFacilities = uniFacility.features.filter( facility => {
+            const filteredFacilities = uniFacility.features.filter( facility => {
               const facilityName = facility.properties.name; // الحصول على الاسم
               return typeof facilityName === 'string' && facilityName.toLowerCase().includes(searchValue);
+
           });
           renderFacilities(filteredFacilities); // إعادة عرض المرافق المفلترة
+      
       } else {
           renderFacilities([]); // عرض قائمة فارغة إذا كان حقل البحث فارغًا
       }
     });
+    
 });

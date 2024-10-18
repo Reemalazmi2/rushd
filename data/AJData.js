@@ -6,7 +6,8 @@ export const uniFacility = {
       "properties": {
         "facility": "building",
         "name": "AJ-11E",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 1
       },
       "geometry": {
         "coordinates": [
@@ -41,7 +42,8 @@ export const uniFacility = {
       "properties": {
         "facility": "building",
         "name": "EDU12 , 12",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 2
       },
       "geometry": {
         "coordinates": [
@@ -76,7 +78,8 @@ export const uniFacility = {
       "properties": {
         "facility": "building",
         "name": "EDU13 , 13",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 3
       },
       "geometry": {
         "coordinates": [
@@ -109,11 +112,9 @@ export const uniFacility = {
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#fd0808",
-        "marker-size": "medium",
-        "marker-symbol": "grocery",
         "facility": "grocery",
-        "name": ""
+        "name": "grocery",
+        "id": 4
       },
       "geometry": {
         "coordinates": [
@@ -121,17 +122,14 @@ export const uniFacility = {
           27.56395918925496
         ],
         "type": "Point"
-      },
-      "id": 3
+      }
     },
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#fd0808",
-        "marker-size": "medium",
-        "marker-symbol": "grocery",
         "facility": "grocery",
-        "name": ""
+        "name": "",
+        "id": 5
       },
       "geometry": {
         "coordinates": [
@@ -139,17 +137,14 @@ export const uniFacility = {
           27.5632763469238
         ],
         "type": "Point"
-      },
-      "id": 4
+      }
     },
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#009dff",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
         "facility": "cafe",
-        "name": ""
+        "name": "",
+        "id": 6
       },
       "geometry": {
         "coordinates": [
@@ -157,17 +152,14 @@ export const uniFacility = {
           27.56373336578548
         ],
         "type": "Point"
-      },
-      "id": 5
+      }
     },
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#009dff",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
         "facility": "cafe",
-        "name": ""
+        "name": "",
+        "id": 7
       },
       "geometry": {
         "coordinates": [
@@ -175,17 +167,14 @@ export const uniFacility = {
           27.563636509563196
         ],
         "type": "Point"
-      },
-      "id": 6
+      }
     },
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#009dff",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
         "facility": "cafe",
-        "name": ""
+        "name": "",
+        "id": 8
       },
       "geometry": {
         "coordinates": [
@@ -193,17 +182,14 @@ export const uniFacility = {
           27.563210850138745
         ],
         "type": "Point"
-      },
-      "id": 7
+      }
     },
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#009dff",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
         "facility": "cafe",
-        "name": ""
+        "name": "",
+        "id": 9
       },
       "geometry": {
         "coordinates": [
@@ -211,17 +197,14 @@ export const uniFacility = {
           27.561985365360883
         ],
         "type": "Point"
-      },
-      "id": 8
+      }
     },
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#009dff",
-        "marker-size": "medium",
-        "marker-symbol": "cafe",
         "facility": "cafe",
-        "name": ""
+        "name": "",
+        "id": 10
       },
       "geometry": {
         "coordinates": [
@@ -229,17 +212,14 @@ export const uniFacility = {
           27.56195020894404
         ],
         "type": "Point"
-      },
-      "id": 9
+      }
     },
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#8fff05",
-        "marker-size": "medium",
-        "marker-symbol": "gate",
         "facility": "gate",
-        "name": "بوابه 5"
+        "name": "بوابه 5",
+        "id": 11
       },
       "geometry": {
         "coordinates": [
@@ -252,11 +232,9 @@ export const uniFacility = {
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#8fff05",
-        "marker-size": "medium",
-        "marker-symbol": "gate",
         "facility": "gate",
-        "name": "بوابه 3"
+        "name": "بوابه 3",
+        "id": 12
       },
       "geometry": {
         "coordinates": [
@@ -269,11 +247,9 @@ export const uniFacility = {
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#8fff05",
-        "marker-size": "medium",
-        "marker-symbol": "gate",
         "facility": "gate",
-        "name": "بوابه 6"
+        "name": "بوابه 6",
+        "id": 13
       },
       "geometry": {
         "coordinates": [
@@ -286,11 +262,9 @@ export const uniFacility = {
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#8fff05",
-        "marker-size": "medium",
-        "marker-symbol": "gate",
         "facility": "gate",
-        "name": "بوابه 7"
+        "name": "بوابه 7",
+        "id": 14
       },
       "geometry": {
         "coordinates": [
@@ -303,11 +277,9 @@ export const uniFacility = {
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#8fff05",
-        "marker-size": "medium",
-        "marker-symbol": "gate",
         "facility": "gate",
-        "name": "بوابه 9"
+        "name": "بوابه 9",
+        "id": 15
       },
       "geometry": {
         "coordinates": [
@@ -315,17 +287,14 @@ export const uniFacility = {
           27.56170721010487
         ],
         "type": "Point"
-      },
-      "id": 14
+      }
     },
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#8fff05",
-        "marker-size": "medium",
-        "marker-symbol": "gate",
         "facility": "gate",
-        "name": "بوابه 1"
+        "name": "بوابه 1",
+        "id": 16
       },
       "geometry": {
         "coordinates": [
@@ -340,7 +309,8 @@ export const uniFacility = {
       "properties": {
         "facility": "building",
         "name": "AJ-17B, 17B",
-        "firstFloor": 1
+        "firstFloor": 1,
+        "id": 17
       },
       "geometry": {
         "coordinates": [
@@ -368,14 +338,14 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 16
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "stadium",
-        "name": "كره السلة , كره الطائرة"
+        "name": "كره السلة , كره الطائرة",
+        "id": 18
       },
       "geometry": {
         "coordinates": [
@@ -403,15 +373,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 17
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "AJ-CL2, CL2",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 19
       },
       "geometry": {
         "coordinates": [
@@ -446,7 +416,8 @@ export const uniFacility = {
       "properties": {
         "facility": "building",
         "name": "AJ-CL1, CL1",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 20
       },
       "geometry": {
         "coordinates": [
@@ -481,7 +452,8 @@ export const uniFacility = {
       "properties": {
         "facility": "building",
         "name": "11A",
-        "firstFloor": 1
+        "firstFloor": 1,
+        "id": 21
       },
       "geometry": {
         "coordinates": [
@@ -516,7 +488,8 @@ export const uniFacility = {
       "properties": {
         "facility": "building",
         "name": "AJ-11D",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 22
       },
       "geometry": {
         "coordinates": [
@@ -550,7 +523,8 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "library",
-        "name": "مكتبه"
+        "name": "مكتبه",
+        "id": 23
       },
       "geometry": {
         "coordinates": [
@@ -578,17 +552,14 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 22
+      }
     },
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "restaurant",
         "facility": "restaurant",
-        "name": ""
+        "name": "",
+        "id": 24
       },
       "geometry": {
         "coordinates": [
@@ -596,15 +567,15 @@ export const uniFacility = {
           27.563460071190363
         ],
         "type": "Point"
-      },
-      "id": 23
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "14A ",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 25
       },
       "geometry": {
         "coordinates": [
@@ -632,15 +603,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 24
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "SC-F B, 14B",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 26
       },
       "geometry": {
         "coordinates": [
@@ -668,15 +639,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 25
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "SC-F C, 14C",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 27
       },
       "geometry": {
         "coordinates": [
@@ -704,15 +675,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 26
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "SC-F D, 14D",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 28
       },
       "geometry": {
         "coordinates": [
@@ -740,15 +711,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 27
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "SC-F E, 14E",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 29
       },
       "geometry": {
         "coordinates": [
@@ -776,15 +747,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 28
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "MD-15, 15",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 30
       },
       "geometry": {
         "coordinates": [
@@ -812,15 +783,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 29
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "MD-16, 16",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 31
       },
       "geometry": {
         "coordinates": [
@@ -848,15 +819,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 30
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "AJ-17A, 17A",
-        "firstFloor": 1
+        "firstFloor": 1,
+        "id": 32
       },
       "geometry": {
         "coordinates": [
@@ -884,15 +855,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 31
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "17G",
-        "firstFloor": 1
+        "firstFloor": 1,
+        "id": 33
       },
       "geometry": {
         "coordinates": [
@@ -920,15 +891,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 32
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "AJ-17C, 17C",
-        "firstFloor": 1
+        "firstFloor": 1,
+        "id": 34
       },
       "geometry": {
         "coordinates": [
@@ -956,15 +927,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 33
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "AJ-17D, 17D",
-        "firstFloor": 1
+        "firstFloor": 1,
+        "id": 35
       },
       "geometry": {
         "coordinates": [
@@ -992,15 +963,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 34
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "AJ-17E, 17E",
-        "firstFloor": 1
+        "firstFloor": 1,
+        "id": 36
       },
       "geometry": {
         "coordinates": [
@@ -1028,15 +999,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 35
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "AJ-17F, 17F",
-        "firstFloor": 1
+        "firstFloor": 1,
+        "id": 37
       },
       "geometry": {
         "coordinates": [
@@ -1064,15 +1035,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 36
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "PH-18, 18",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 38
       },
       "geometry": {
         "coordinates": [
@@ -1100,15 +1071,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 37
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "PH-19, 19",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 39
       },
       "geometry": {
         "coordinates": [
@@ -1136,15 +1107,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 38
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": 20,
-        "firstFloor": 1
+        "name": "20",
+        "firstFloor": 1,
+        "id": 40
       },
       "geometry": {
         "coordinates": [
@@ -1172,15 +1143,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 39
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "NR-21, 21",
-        "firstFloor": 1
+        "firstFloor": 1,
+        "id": 41
       },
       "geometry": {
         "coordinates": [
@@ -1215,7 +1186,8 @@ export const uniFacility = {
       "properties": {
         "facility": "building",
         "name": "HS-22, 22",
-        "firstFloor": 1
+        "firstFloor": 1,
+        "id": 42
       },
       "geometry": {
         "coordinates": [
@@ -1243,15 +1215,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 41
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "DN-23A, 23A",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 43
       },
       "geometry": {
         "coordinates": [
@@ -1279,15 +1251,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 42
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "AJ-24, 24",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 44
       },
       "geometry": {
         "coordinates": [
@@ -1315,15 +1287,15 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 43
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
         "name": "AJ-26, 26",
-        "firstFloor": 0
+        "firstFloor": 0,
+        "id": 45
       },
       "geometry": {
         "coordinates": [
@@ -1351,14 +1323,14 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 44
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "play",
-        "name": "الصالة الترفيهيه"
+        "name": "الصالة الترفيهيه",
+        "id": 46
       },
       "geometry": {
         "coordinates": [
@@ -1386,14 +1358,14 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 45
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "stadium",
-        "name": "كره القدم"
+        "name": "كره القدم",
+        "id": 47
       },
       "geometry": {
         "coordinates": [
@@ -1421,14 +1393,14 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 46
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "ADMIN, قاعه التحضيري"
+        "name": "ADMIN, قاعه التحضيري",
+        "id": 48
       },
       "geometry": {
         "coordinates": [
@@ -1456,8 +1428,7 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      },
-      "id": 47
+      }
     }
   ]
 }
