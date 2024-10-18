@@ -52,11 +52,13 @@ ul {
     border: 1px solid #ddd;
     border-radius: 5px; 
     z-index: 11; 
-    width: 55%;
+    width: 52%;
     position: absolute;
     margin-top: 40px;
     margin-left: -65px;
     padding: 0;
+    max-height: 200px; /* تحديد ارتفاع أقصى */
+    overflow-y: auto; /* تفعيل التمرير العمودي */
 }
 
 li {
