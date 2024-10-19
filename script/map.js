@@ -1,7 +1,7 @@
 import { uniFacility } from '../data/AJData.js';
 import { facilities } from '../data/facility.js';
 
-export let map = L.map('map').setView([27.563073576201173, 41.700262995401836],16.4);
+export const map = L.map('map').setView([27.563073576201173, 41.700262995401836],16.4);
 
 L.tileLayer('https://api.maptiler.com/maps/satellite/{z}/{x}/{y}.jpg?key=dHw0UMIl4hh0KzSUqiMq', {
   maxZoom: 19,

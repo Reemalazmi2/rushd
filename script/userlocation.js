@@ -14,10 +14,9 @@ function userlocation() {
         // تحريك الخريطة إلى موقع المستخدم
         map.setView([lat, lon], 13);
     }, () => {
-        alert('Unable to retrieve your location.');
+        alert(`لا يمكن الوصول لموقعك
+          الرجاء التأكد من تفعيل الوصول للموقع من الاعدادات`);
     });
-  } else {
-    alert('Geolocation is not supported by this browser.');
   }
 }
 
