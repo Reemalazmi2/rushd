@@ -1,6 +1,6 @@
 export const facilities = [{
   id: "cafe",
-  image:"./../img/cafe-coffee-cup-svgrepo-com.svg",
+  image:"../img/cafe-coffee-cup-svgrepo-com.svg",
   title: 'مقهى'
 }, {
   id: "restaurant",
@@ -38,7 +38,7 @@ function renderFacility() {
   facilities.forEach((facility) => {
     facilityHTML += `
       <button class="facility-button js-look-for-facility" data-facility-id="${facility.id}">
-          <img class="facility-icon" src=${facility.image}>
+          <img class="facility-icon" src=${facility.image} alt="Descripption">
           <div class="icon-title">
               ${facility.title}
           </div>
