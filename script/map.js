@@ -1,7 +1,7 @@
 import { uniFacility } from '../data/AJData.js';
 import { facilities } from '../data/facility.js';
 
-let map = L.map('map').setView([27.563073576201173, 41.700262995401836],16.4);
+export let map = L.map('map').setView([27.563073576201173, 41.700262995401836],16.4);
 
 L.tileLayer('https://api.maptiler.com/maps/satellite/{z}/{x}/{y}.jpg?key=dHw0UMIl4hh0KzSUqiMq', {
   maxZoom: 19,
@@ -38,6 +38,29 @@ function LookForFacility() {
               layer.bindPopup(feature.properties.name || "Unnamed Facility");
             }
           }*/ ).addTo(map);
+
+          const bounds = L.latLngBounds();
+
+          filteredFeatures.forEach(feature => {
+            if (feature.geometry.type === "Point") {
+              // إذا كانت الميزة نقطة، أضف إحداثياتها
+              bounds.extend(L.latLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]));
+            } else if (feature.geometry.type === "Polygon" || feature.geometry.type === "MultiPolygon") {
+              // إذا كانت الميزة مضلع، أضف جميع الإحداثيات
+              feature.geometry.coordinates[0].forEach(coord => {
+                bounds.extend(L.latLng(coord[1], coord[0]));
+              });
+            } else if (feature.geometry.type === "LineString" || feature.geometry.type === "MultiLineString") {
+              // إذا كانت الميزة خط، أضف جميع الإحداثيات
+              feature.geometry.coordinates.forEach(coord => {
+                bounds.extend(L.latLng(coord[1], coord[0]));
+              });
+            }
+          });
+
+          // تقريب الخريطة إلى الحدود
+          map.fitBounds(bounds);
+
         }
       });
     });
