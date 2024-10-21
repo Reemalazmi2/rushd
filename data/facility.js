@@ -1,6 +1,6 @@
 export const facilities = [{
   id: "cafe",
-  image:"../img/coffee-cup-coffee-svgrepo-com.png",
+  image:"img/coffee-cup-coffee-svgrepo-com.png",
   title: 'مقهى'
 }, {
   id: "restaurant",
