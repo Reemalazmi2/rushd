@@ -4,31 +4,31 @@ export const facilities = [{
   title: 'مقهى'
 }, {
   id: "restaurant",
-  image: "../img/restaurant-svgrepo-com.png",
+  image: "./img/restaurant-svgrepo-com.png",
   title: 'مطعم'
 }, {
   id: "grocery",
-  image:"../img/shop-cart-svgrepo-com.svg",
+  image:"./img/shop-cart-svgrepo-com.svg",
   title: 'بقالة'
 }, {
   id: "mosque",
-  image:"../img/pray-day-svgrepo-com.svg",
+  image:"./img/pray-day-svgrepo-com.svg",
   title: 'مصلى'
 }, {
   id: "stadium",
-  image:"../img/basketball-svgrepo-com.svg",
+  image:"./img/basketball-svgrepo-com.svg",
   title: 'ملعب كرة السلة'
 }, {
   id: "stadium",
-  image:"../img/football-svgrepo-com.svg",
+  image:"./img/football-svgrepo-com.svg",
   title: 'ملعب كرة القدم'
 }, {
   id: "stadium",
-  image:"../img/gym-svgrepo-com.svg",
+  image:"./img/gym-svgrepo-com.svg",
   title: ' الصالة الرياضية'
 }, {
   id: "hospital",
-  image:"../img/hospital-svgrepo-com.svg",
+  image:"./img/hospital-svgrepo-com.svg",
   title: ' المستشفى الجامعي '
 }]
 
