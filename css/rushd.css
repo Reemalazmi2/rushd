@@ -16,27 +16,26 @@
 }
 
 .Searchbar{
-    margin-top: -20px;
+    margin-top: -2.5vh;
     width: 50%;
-    height: 55px;
+    height: 6vh;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border: 2px solid lightgray;
     font-size: 20px;
-    padding-left: 30px;
+    padding-left: 2%;
     z-index: 12;
 }
 
 .search-button{
-    height: 61px;
-    width: 66px;
+    height: 6.7vh;
+    width: 10%;
     background-color: rgb(240, 240, 240);
     border-width: 1px;
     border-style: solid;
     border-color: rgb(192, 192, 192);
-    margin-top: -20px;
-    margin-left: -1px;
-    margin-right: 10px;
+    margin-top: -2.5vh;
+    margin-left: -1%;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     cursor: pointer;
@@ -52,13 +51,13 @@ ul {
     border: 1px solid #ddd;
     border-radius: 5px; 
     z-index: 11; 
-    width: 52%;
+    width: 52.5%;
     position: absolute;
-    margin-top: 40px;
-    margin-left: -65px;
+    margin-top: 2.7vh;
+    margin-left: -8.5%;
     padding: 0;
-    max-height: 200px; /* تحديد ارتفاع أقصى */
-    overflow-y: auto; /* تفعيل التمرير العمودي */
+    max-height: 25vh; 
+    overflow-y: auto; 
 }
 
 li {
@@ -79,9 +78,8 @@ li:last-child {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    padding: 30px 20px 20px 20px;
+    padding: 4% 5% 5% 5%;
     align-items: center;
-    font-size: 70px;
 }
 
 .facility-button{
@@ -92,11 +90,11 @@ li:last-child {
 }
 
 .facility-icon{
-    height: 80px;
+    height: 10vh;
 }
 
 .icon-title{
-    font-size: 20px;
+    font-size: 149%;
 }
 
 .map{
@@ -104,7 +102,7 @@ li:last-child {
     top: 0;
     right: 0;
     left: 0;
-    height: 65%;
+    height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,6 +110,20 @@ li:last-child {
 }
 
 .findMecss{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3%;
+    right: 2%;
+    width: 5%;
     z-index: 100;
+    background-color: white;
+    border: none;
+}
+
+.arrow-direction{
+    height: 100%;
+    width: 100%;
 }
 

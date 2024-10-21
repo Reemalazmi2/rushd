@@ -8,18 +8,38 @@ L.tileLayer('https://api.maptiler.com/maps/satellite/{z}/{x}/{y}.jpg?key=dHw0UMI
   attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
 }).addTo(map);
 
+
+function addGeoJson(filteredFeatures) {
+  map.eachLayer(layer => {
+    if (layer instanceof L.GeoJSON) {
+        map.removeLayer(layer);
+    }
+  });
+
+  const geojsonLayer = L.geoJSON({
+    type: 'FeatureCollection',
+    features: filteredFeatures
+  }).addTo(map);
+
+  const geometryType = filteredFeatures[0].geometry.type;
+  if (geometryType === 'Point') {
+      map.fitBounds(geojsonLayer.getBounds(), {
+        padding: [100,100]
+      }); // تعيين العرض للنقطة بمستوى تكبير أكبر
+  } else if (geometryType === 'Polygon' || feature.geometry.type === "MultiPolygon") {
+      // ضبط الخريطة لتناسب حدود المضلع
+      map.fitBounds(geojsonLayer.getBounds(), {
+        padding: [100,100]
+      });
+  }
+}
+
+
 function LookForFacility() {
   document.querySelectorAll('.js-look-for-facility')
     .forEach((button) => {
       button.addEventListener('click', () => {
         const facilityId = button.getAttribute('data-facility-id'); 
-
-        // إزالة جميع الطبقات السابقة من الخريطة
-        map.eachLayer(layer => {
-          if (layer instanceof L.GeoJSON) {
-            map.removeLayer(layer);
-          }
-        });
 
         // فلترة الميزات بناءً على id المختار
         const filteredFeatures = uniFacility.features.filter(feature => {
@@ -27,40 +47,7 @@ function LookForFacility() {
         });
 
         if (filteredFeatures.length > 0) {
-          // إضافة GeoJSON المفلتر إلى الخريطة
-          L.geoJSON({
-            type: 'FeatureCollection',
-            features: filteredFeatures
-          } /*
-              add popup
-          , {
-            onEachFeature: function(feature, layer) {
-              layer.bindPopup(feature.properties.name || "Unnamed Facility");
-            }
-          }*/ ).addTo(map);
-
-          const bounds = L.latLngBounds();
-
-          filteredFeatures.forEach(feature => {
-            if (feature.geometry.type === "Point") {
-              // إذا كانت الميزة نقطة، أضف إحداثياتها
-              bounds.extend(L.latLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]));
-            } else if (feature.geometry.type === "Polygon" || feature.geometry.type === "MultiPolygon") {
-              // إذا كانت الميزة مضلع، أضف جميع الإحداثيات
-              feature.geometry.coordinates[0].forEach(coord => {
-                bounds.extend(L.latLng(coord[1], coord[0]));
-              });
-            } else if (feature.geometry.type === "LineString" || feature.geometry.type === "MultiLineString") {
-              // إذا كانت الميزة خط، أضف جميع الإحداثيات
-              feature.geometry.coordinates.forEach(coord => {
-                bounds.extend(L.latLng(coord[1], coord[0]));
-              });
-            }
-          });
-
-          // تقريب الخريطة إلى الحدود
-          map.fitBounds(bounds);
-
+          addGeoJson(filteredFeatures);
         }
       });
     });
@@ -87,37 +74,14 @@ function renderFacilities(facilities) {
 function showBuilding(facility) {
   const facilityId = facility.properties.id;
 
-  // إزالة جميع طبقات GeoJSON السابقة من الخريطة
-  map.eachLayer(layer => {
-      if (layer instanceof L.GeoJSON) {
-          map.removeLayer(layer);
-      }
-  });
-
   // تصفية الميزات بناءً على الـ id
   const filteredFeatures = uniFacility.features.filter(feature => {
       return feature.properties.id === facilityId;
   });
 
   if (filteredFeatures.length > 0) {
-      // إضافة GeoJSON المفلتر إلى الخريطة
-      const geojsonLayer = L.geoJSON({
-          type: 'FeatureCollection',
-          features: filteredFeatures
-      }).addTo(map);
-
-      // تعيين العرض بناءً على نوع الهندسة
-      const geometryType = filteredFeatures[0].geometry.type;
-
-      if (geometryType === 'Point') {
-          map.fitBounds(geojsonLayer.getBounds()); // تعيين العرض للنقطة بمستوى تكبير أكبر
-      } else if (geometryType === 'Polygon') {
-          // ضبط الخريطة لتناسب حدود المضلع
-          map.fitBounds(geojsonLayer.getBounds());
-      }
-  } else {
-      console.log('لا توجد ميزات تطابق الـ id المحدد.');
-  }
+      addGeoJson(filteredFeatures);
+  } 
 }
 
 

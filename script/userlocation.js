@@ -12,7 +12,7 @@ function userlocation() {
         userMarker.bindPopup('You are here!').openPopup();
 
         // تحريك الخريطة إلى موقع المستخدم
-        map.setView([lat, lon], 13);
+        map.setView([lat, lon], 16);
     }, () => {
         alert(`لا يمكن الوصول لموقعك
           الرجاء التأكد من تفعيل الوصول للموقع من الاعدادات`);
