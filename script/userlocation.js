@@ -1,6 +1,5 @@
 import { map } from './map.js';
 
-let control;
 
 export function userlocation() {
   return new Promise((resolve) => {
@@ -34,16 +33,15 @@ document.getElementById('findMe').addEventListener('click', () => {
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
+let currentRoute;
 
 function routeToDestination(userLat, userLon, destinationLat, destinationLon) {
 
-  map.eachLayer(layer => {
-    if (layer instanceof L.GeoJSON) {
-        map.removeLayer(layer);
-    }
-  });
+  if (currentRoute) {
+    map.removeControl(currentRoute);
+  }
 
-  L.Routing.control({
+  currentRoute = L.Routing.control({
     waypoints: [
         L.latLng(userLat, userLon),
         L.latLng(destinationLat, destinationLon)
