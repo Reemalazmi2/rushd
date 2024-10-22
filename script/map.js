@@ -1,5 +1,6 @@
 import { uniFacility } from '../data/AJData.js';
 import { facilities } from '../data/facility.js';
+import { routing } from './userlocation.js';
 
 export const map = L.map('map').setView([27.563073576201173, 41.700262995401836],16.4);
 
@@ -48,6 +49,8 @@ function LookForFacility() {
 
         if (filteredFeatures.length > 0) {
           addGeoJson(filteredFeatures);
+
+          routing(filteredFeatures);
         }
       });
     });
@@ -64,6 +67,8 @@ function renderFacilities(facilities) {
       li.textContent = facility.properties.name; // إضافة اسم المرفق إلى القائمة
       li.onclick = function() {
         showBuilding(facility);
+        searchList.innerHTML= '';
+        searchInput.value = '';
       };
       searchList.appendChild(li); // التأكد من أن searchList هو عنصر صالح
   });
@@ -82,6 +87,7 @@ function showBuilding(facility) {
   if (filteredFeatures.length > 0) {
       addGeoJson(filteredFeatures);
   } 
+
 }
 
 
@@ -89,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // لا تعرض أي مرافق عند التحميل
 
   // إضافة مستمع للبحث
-  document.getElementById('searchInput')
+  const searchInput = document.getElementById('searchInput')
     .addEventListener('keyup', function() {
       const searchValue = this.value.toLowerCase(); // الحصول على قيمة البحث وتحويلها إلى حروف صغيرة
 
@@ -100,10 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
           });
           renderFacilities(filteredFacilities); // إعادة عرض المرافق المفلترة
-      
       } else {
           renderFacilities([]); // عرض قائمة فارغة إذا كان حقل البحث فارغًا
       }
     });
-    
 });
+
