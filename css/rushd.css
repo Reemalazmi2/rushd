@@ -68,8 +68,7 @@ li:last-child {
     border: none;
     cursor: pointer;
     width: 10%;
-    padding-left: 45%;
-    margin-bottom: 10%;
+    margin-bottom: 6%;
     margin-top: 10%;
     display: flex;
     flex-direction: column;
