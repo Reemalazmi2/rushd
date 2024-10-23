@@ -12,7 +12,7 @@ export const facilities = [{
   title: 'بقالة'
 }, {
   id: "mosque",
-  image:"../img/mosque-islam-svgrepo-com.png",
+  image:"./img/mosque-islam-svgrepo-com.png",
   title: 'مصلى'
 }, {
   id: "breakRoom",
@@ -20,7 +20,7 @@ export const facilities = [{
   title: ' استراحة طالبات '
 }, {
   id: "hospital",
-  image:"../img/hospital-medical-nurse-svgrepo-com.png",
+  image:"./img/hospital-medical-nurse-svgrepo-com.png",
   title: ' العيادة الجامعي '
 }]
 

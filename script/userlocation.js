@@ -49,7 +49,7 @@ function routeToDestination(userLat, userLon, destinationLat, destinationLon) {
       geocoder: L.Control.Geocoder.nominatim(),
       createMarker: function() { return null; },
       router: new L.Routing.OSRMv1({
-        serviceUrl: 'https://router.project-osrm.org/route/v1/walking' // استخدام نمط المشي
+        serviceUrl: 'https://router.project-osrm.org/route/v1/' // استخدام نمط المشي
 
         // اذا ما اشتغل احذفي walking
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
