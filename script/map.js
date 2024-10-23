@@ -9,11 +9,20 @@ L.tileLayer('https://api.maptiler.com/maps/satellite/{z}/{x}/{y}.jpg?key=dHw0UMI
   attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
 }).addTo(map);
 
+let markersArray = [];
+
+function createButton(label, container) {
+  var btn = L.DomUtil.create('button', '', container);
+  btn.setAttribute('type', 'button');
+  btn.innerHTML = label;
+  return btn;
+}
 
 function addGeoJson(filteredFeatures) {
+  // إزالة الطبقات السابقة من الخريطة
   map.eachLayer(layer => {
     if (layer instanceof L.GeoJSON) {
-        map.removeLayer(layer);
+      map.removeLayer(layer);
     }
   });
 
@@ -22,19 +31,72 @@ function addGeoJson(filteredFeatures) {
     features: filteredFeatures
   }).addTo(map);
 
-  const geometryType = filteredFeatures[0].geometry.type;
-  if (geometryType === 'Point') {
-      map.fitBounds(geojsonLayer.getBounds(), {
-        padding: [100,100]
-      }); // تعيين العرض للنقطة بمستوى تكبير أكبر
-  } else if (geometryType === 'Polygon' || feature.geometry.type === "MultiPolygon") {
-      // ضبط الخريطة لتناسب حدود المضلع
-      map.fitBounds(geojsonLayer.getBounds(), {
-        padding: [100,100]
-      });
-  }
-}
+  geojsonLayer.eachLayer(function(layer) {
+    if (layer instanceof L.Marker) {
+      markersArray.push(layer);
+      
+      // إعداد النافذة المنبثقة باستخدام id كمعرف فريد
+      const featureName = layer.feature.properties.name; // تأكد من أن لديك خاصية id
+      layer.on('click', function(e) {
+        let container = L.DomUtil.create('div');
+      
+        // إضافة نص
+        let text = L.DomUtil.create('p', '', container);
+        text.innerHTML = `${featureName}`;
+      
+        // إضافة زر
+        let actionBtn = createButton('اذهب', container);
+        
+        // ربط حدث الزر
+        L.DomEvent.on(actionBtn, 'click', () => {
+          routing(layer.feature); // تأكد من أن هذه الدالة موجودة
+          map.closePopup(); // إغلاق النافذة المنبثقة بعد النقر
+        });
 
+        // فتح النافذة المنبثقة
+        L.popup()
+          .setContent(container)
+          .setLatLng(e.latlng)
+          .openOn(map);
+      });
+    } else if (layer instanceof L.Polygon) {
+      // إعداد النافذة المنبثقة عند الضغط على المضلع
+      layer.on('click', function(e) {
+        let container = L.DomUtil.create('div');
+
+        // إضافة نص
+        let text = L.DomUtil.create('p', '', container);
+        text.innerHTML = `${layer.feature.properties.name}`;
+
+        // إضافة زر
+        let actionBtn = createButton('اذهب', container);
+
+        // ربط حدث الزر
+        L.DomEvent.on(actionBtn, 'click', () => {
+          routing(layer.feature); // تمرير الميزة إلى دالة التوجيه
+          map.closePopup(); // إغلاق النافذة المنبثقة بعد النقر
+        });
+
+        // فتح النافذة المنبثقة
+        L.popup()
+          .setContent(container)
+          .setLatLng(e.latlng)
+          .openOn(map);
+      });
+    }
+  });
+
+  console.log(markersArray);
+
+  const geometryType = filteredFeatures[0].geometry.type;
+  
+  if (geometryType === 'Point' || geometryType === 'Polygon' || geometryType === "MultiPolygon") {
+    map.fitBounds(geojsonLayer.getBounds(), {
+      padding: [100, 100]
+    });
+  }
+
+}
 
 function LookForFacility() {
   document.querySelectorAll('.js-look-for-facility')
@@ -46,14 +108,14 @@ function LookForFacility() {
         const filteredFeatures = uniFacility.features.filter(feature => {
           return feature.properties.facility === facilityId;
         });
-
+        
         if (filteredFeatures.length > 0) {
           addGeoJson(filteredFeatures);
-
-          routing(filteredFeatures);
         }
+        
       });
     });
+    
 }
 
 // استدعاء الوظيفة
@@ -73,7 +135,6 @@ function renderFacilities(facilities) {
       searchList.appendChild(li); // التأكد من أن searchList هو عنصر صالح
   });
 }
-
 
 
 function showBuilding(facility) {
