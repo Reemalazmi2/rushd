@@ -8,28 +8,20 @@ export const facilities = [{
   title: 'مطعم'
 }, {
   id: "grocery",
-  image:"./img/shop-cart-svgrepo-com.svg",
+  image:"./img/grocery-trolley-svgrepo-com.png",
   title: 'بقالة'
 }, {
   id: "mosque",
-  image:"./img/pray-day-svgrepo-com.svg",
+  image:"../img/mosque-islam-svgrepo-com.png",
   title: 'مصلى'
 }, {
-  id: "stadium",
-  image:"./img/basketball-svgrepo-com.svg",
-  title: 'ملعب كرة السلة'
-}, {
-  id: "stadium",
-  image:"./img/football-svgrepo-com.svg",
-  title: 'ملعب كرة القدم'
-}, {
-  id: "stadium",
-  image:"./img/gym-svgrepo-com.svg",
-  title: ' الصالة الرياضية'
+  id: "breakRoom",
+  image:"./img/rest-area-picnic-svgrepo-com.png",
+  title: ' استراحة طالبات '
 }, {
   id: "hospital",
-  image:"./img/hospital-svgrepo-com.svg",
-  title: ' المستشفى الجامعي '
+  image:"../img/hospital-medical-nurse-svgrepo-com.png",
+  title: ' العيادة الجامعي '
 }]
 
 function renderFacility() {
