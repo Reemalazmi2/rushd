@@ -35,7 +35,7 @@ document.getElementById('findMe').addEventListener('click', () => {
 ///////////////////////////////////////////////////////////////////////////////////////////////
 let currentRoute;
 
-function routeToDestination(userLat, userLon, destinationLat, destinationLon) {
+export function routeToDestination(userLat, userLon, destinationLat, destinationLon) {
     if (currentRoute) {
       map.removeControl(currentRoute);
     }
@@ -48,14 +48,15 @@ function routeToDestination(userLat, userLon, destinationLat, destinationLon) {
       routeWhileDragging: true,
       geocoder: L.Control.Geocoder.nominatim(),
       createMarker: function() { return null; },
-      router: new L.Routing.OSRMv1({
-        serviceUrl: 'https://router.project-osrm.org/route/v1/' // استخدام نمط المشي
+      router: L.Routing.mapbox('pk.eyJ1IjoicmVlbWFsYXptaSIsImEiOiJjbTJqZ2lvM3gwNTM2Mm1yMWdxY3Q5YThkIn0.VtsPhjheCaixoSNbnk2siw', {
+        profile: 'mapbox/walking' // طريقة التنقل: المشي
+      })
+        // استخدام نمط المشي
 
         // اذا ما اشتغل احذفي walking
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      })
-    }).addTo(map);
-  }
+      }).addTo(map);
+}
 
 
 export function routing(selectedFeature) {

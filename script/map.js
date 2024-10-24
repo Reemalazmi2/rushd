@@ -1,12 +1,13 @@
 import { uniFacility } from '../data/AJData.js';
 import { facilities } from '../data/facility.js';
-import { routing } from './userlocation.js';
+import { routing, routeToDestination } from './userlocation.js';
 
 export const map = L.map('map').setView([27.563073576201173, 41.700262995401836],16.4);
 
-L.tileLayer('https://api.maptiler.com/maps/satellite/{z}/{x}/{y}.jpg?key=dHw0UMIl4hh0KzSUqiMq', {
+L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/{z}/{x}/{y}?access_token=' + 'pk.eyJ1IjoicmVlbWFsYXptaSIsImEiOiJjbTJqZ2lvM3gwNTM2Mm1yMWdxY3Q5YThkIn0.VtsPhjheCaixoSNbnk2siw', {
   maxZoom: 19,
-  attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="https://www.mapbox.com/">Mapbox</a>',
+
 }).addTo(map);
 
 let markersArray = [];
