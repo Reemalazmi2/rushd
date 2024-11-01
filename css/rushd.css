@@ -25,7 +25,7 @@ body{
     height: 6vh;
     border-radius: 10px;
     border: 2px solid lightgray;
-    font-size: 20px;
+    font-size: 17px;
     padding-left: 2%;
     z-index: 12;
     max-width: 1000px;
@@ -36,7 +36,7 @@ ul {
     background-color: #f9f9f9;
     border-radius: 5px;
     z-index: 11;
-    width: 52.5%;
+    width: 67%;
     position: absolute;
     margin-top: 4.4vh;
     padding: 0;
@@ -80,7 +80,7 @@ li:last-child {
 }
 
 .facility-icon {
-    height: 8vh;
+    height: 9vh;
 }
 
 .icon-title {
@@ -103,22 +103,19 @@ li:last-child {
 .findMecss {
     position: fixed; 
     margin-top: 70px;
-    margin-left: 18px;
-    transform: translateX(-50%); 
-    width: 31px;
-    height: 25px;
+    width: 20px;
+    height: 29px;
     z-index: 100;
     background-color: white;
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    padding-right: 26px;
 }
 
 .arrow-direction {
-    width: 100%;
-    padding-top: 3px;
-
+    height: 2.6vh;
 }
 
 .leaflet-routing-container {
-display: none;
+    display: none;
 } 

@@ -4,15 +4,15 @@ export const facilities = [{
   title: 'مقهى'
 }, {
   id: "restaurant",
-  image: "../img/fork-and-knife-svgrepo-com.png",
+  image: "./img/fork-and-knife-svgrepo-com.png",
   title: 'مطعم'
 }, {
   id: "grocery",
-  image:"../img/cart-svgrepo-com.png",
+  image:"./img/cart-svgrepo-com.png",
   title: 'بقالة'
 }, {
   id: "mosque",
-  image:"../img/small-mosque-svgrepo-com.png",
+  image:"./img/small-mosque-svgrepo-com.png",
   title: 'مصلى'
 }, {
   id: "breakRoom",
