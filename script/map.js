@@ -56,6 +56,11 @@ function addGeoJson(filteredFeatures) {
         L.DomEvent.on(actionBtn, 'click', () => {
           routing(layer.feature); 
           map.closePopup(); 
+          map.eachLayer(layer => {
+            if (layer instanceof L.Marker) {
+              map.removeLayer(layer);
+            }
+          });
         });
 
         // فتح النافذة المنبثقة
@@ -68,7 +73,7 @@ function addGeoJson(filteredFeatures) {
       // اضافة النافذة المنبثقة والتوجية للمضلعات
     } else if (layer instanceof L.Polygon) {
       
-        layer.on('click', function(e) {
+      layer.on('click', function(e) {
         let container = L.DomUtil.create('div');
 
         // إضافة نص
@@ -82,6 +87,11 @@ function addGeoJson(filteredFeatures) {
         L.DomEvent.on(actionBtn, 'click', () => {
           routing(layer.feature); 
           map.closePopup(); 
+          map.eachLayer(layer => {
+            if (layer instanceof L.Polygon) {
+              map.removeLayer(layer);
+            }
+          });
         });
 
         // فتح النافذة المنبثقة
@@ -89,7 +99,7 @@ function addGeoJson(filteredFeatures) {
           .setContent(container)
           .setLatLng(e.latlng)
           .openOn(map);
-      });
+    });
     }
   });
 
