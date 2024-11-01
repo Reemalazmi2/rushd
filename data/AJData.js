@@ -5,7 +5,422 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "AJ-11E",
+        "name": "ادارة مجمع اجا للطالبات",
+        "id": 58
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              41.701561232429015,
+              27.563300035806492
+            ],
+            [
+              41.70155890235327,
+              27.56306501598941
+            ],
+            [
+              41.701346394660845,
+              27.56308619001709
+            ],
+            [
+              41.70128919010682,
+              27.56290727976267
+            ],
+            [
+              41.701600095617636,
+              27.562824594100633
+            ],
+            [
+              41.70164673144373,
+              27.563058869981774
+            ],
+            [
+              41.70187213793983,
+              27.563017527215166
+            ],
+            [
+              41.70191100112842,
+              27.563196679089756
+            ],
+            [
+              41.70170113990844,
+              27.563224240890577
+            ],
+            [
+              41.70170113990844,
+              27.56329314536194
+            ],
+            [
+              41.701561232429015,
+              27.563300035806492
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "hospital",
+        "name": "العيادات الجامعية",
+        "id": 49,
+        "firstFloor": ""
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              41.69945112220759,
+              27.5647897724905
+            ],
+            [
+              41.69943479998233,
+              27.564704914282387
+            ],
+            [
+              41.6992377462843,
+              27.564760493003618
+            ],
+            [
+              41.69922502231361,
+              27.564643564777896
+            ],
+            [
+              41.69940871253414,
+              27.56459396200333
+            ],
+            [
+              41.69940878892331,
+              27.564541500906245
+            ],
+            [
+              41.69966417624411,
+              27.564486191569557
+            ],
+            [
+              41.69967738909932,
+              27.564564809401517
+            ],
+            [
+              41.69988040342892,
+              27.56453858819326
+            ],
+            [
+              41.69989712583234,
+              27.56462605167789
+            ],
+            [
+              41.699693883996645,
+              27.564631888621463
+            ],
+            [
+              41.699717034306246,
+              27.564734157702702
+            ],
+            [
+              41.69945112220759,
+              27.5647897724905
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "building",
+        "name": "الحضانة",
+        "id": 50
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              41.699825927889805,
+              27.56442456615467
+            ],
+            [
+              41.69973383661619,
+              27.564016374932606
+            ],
+            [
+              41.69951697651882,
+              27.564037442903796
+            ],
+            [
+              41.69948429897019,
+              27.563913668515895
+            ],
+            [
+              41.69997743288991,
+              27.5638399305156
+            ],
+            [
+              41.700078436222725,
+              27.564382430356844
+            ],
+            [
+              41.699825927889805,
+              27.56442456615467
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "building",
+        "name": 7,
+        "id": 51
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              41.699707213747644,
+              27.563738347639216
+            ],
+            [
+              41.69953294965512,
+              27.562796486314568
+            ],
+            [
+              41.69977467081486,
+              27.562736685322733
+            ],
+            [
+              41.69998266344177,
+              27.56370346403041
+            ],
+            [
+              41.699707213747644,
+              27.563738347639216
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "building",
+        "name": 5,
+        "id": 52
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              41.70036797663161,
+              27.564131411208123
+            ],
+            [
+              41.700182471213225,
+              27.563327728437187
+            ],
+            [
+              41.7006911151054,
+              27.563258765285212
+            ],
+            [
+              41.70085866838863,
+              27.564043881687056
+            ],
+            [
+              41.70036797663161,
+              27.564131411208123
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "building",
+        "name": 3,
+        "id": 53
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              41.700864664783495,
+              27.563891942530105
+            ],
+            [
+              41.70077038217684,
+              27.563401356748315
+            ],
+            [
+              41.701204902015206,
+              27.563328677187286
+            ],
+            [
+              41.70131968084101,
+              27.5638047274403
+            ],
+            [
+              41.700864664783495,
+              27.563891942530105
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "mosque",
+        "name": "مسجد",
+        "id": 54
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              41.70081461202784,
+              27.563213757631786
+            ],
+            [
+              41.70074448624234,
+              27.56299126653181
+            ],
+            [
+              41.70093271861282,
+              27.562932371752623
+            ],
+            [
+              41.701002844397294,
+              27.563161406825174
+            ],
+            [
+              41.70081461202784,
+              27.563213757631786
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "building",
+        "name": 6,
+        "id": 55
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              41.7000999500265,
+              27.562998482992327
+            ],
+            [
+              41.69992011266578,
+              27.56220577720417
+            ],
+            [
+              41.70045962474941,
+              27.562099492194008
+            ],
+            [
+              41.70065444855783,
+              27.56292319833122
+            ],
+            [
+              41.7000999500265,
+              27.562998482992327
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "building",
+        "name": "شؤون الطالبات",
+        "id": 56
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              41.70017241215015,
+              27.562056187153715
+            ],
+            [
+              41.7000824566332,
+              27.561665428687505
+            ],
+            [
+              41.700239878788466,
+              27.56164947933223
+            ],
+            [
+              41.70032533653091,
+              27.56202428855552
+            ],
+            [
+              41.70017241215015,
+              27.562056187153715
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "building",
+        "name": 4,
+        "id": 57
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              41.70064827071664,
+              27.562808270396943
+            ],
+            [
+              41.70050653273509,
+              27.5622769435887
+            ],
+            [
+              41.70098439221729,
+              27.562205142471
+            ],
+            [
+              41.70108158397633,
+              27.562722109467714
+            ],
+            [
+              41.70064827071664,
+              27.562808270396943
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "building",
+        "name": "11E",
         "firstFloor": 0,
         "id": 1
       },
@@ -41,7 +456,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "EDU12 , 12",
+        "name": 12,
         "firstFloor": 0,
         "id": 2
       },
@@ -77,7 +492,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "EDU13 , 13",
+        "name": 13,
         "firstFloor": 0,
         "id": 3
       },
@@ -113,7 +528,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "grocery",
-        "name": "grocery",
+        "name": "بقالة",
         "id": 4
       },
       "geometry": {
@@ -122,13 +537,14 @@ export const uniFacility = {
           27.56395918925496
         ],
         "type": "Point"
-      }
+      },
+      "id": 13
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "grocery",
-        "name": "",
+        "name": "بقالة",
         "id": 5
       },
       "geometry": {
@@ -137,13 +553,14 @@ export const uniFacility = {
           27.5632763469238
         ],
         "type": "Point"
-      }
+      },
+      "id": 14
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "cafe",
-        "name": "",
+        "name": "pro kooz cafe",
         "id": 6
       },
       "geometry": {
@@ -152,7 +569,8 @@ export const uniFacility = {
           27.56373336578548
         ],
         "type": "Point"
-      }
+      },
+      "id": 15
     },
     {
       "type": "Feature",
@@ -167,13 +585,14 @@ export const uniFacility = {
           27.563636509563196
         ],
         "type": "Point"
-      }
+      },
+      "id": 16
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "cafe",
-        "name": "",
+        "name": "pro kooz cafe",
         "id": 8
       },
       "geometry": {
@@ -182,13 +601,14 @@ export const uniFacility = {
           27.563210850138745
         ],
         "type": "Point"
-      }
+      },
+      "id": 17
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "cafe",
-        "name": "",
+        "name": "Coffee First cafe",
         "id": 9
       },
       "geometry": {
@@ -197,13 +617,14 @@ export const uniFacility = {
           27.561985365360883
         ],
         "type": "Point"
-      }
+      },
+      "id": 18
     },
     {
       "type": "Feature",
       "properties": {
         "facility": "cafe",
-        "name": "",
+        "name": "Pro Kooz cafe",
         "id": 10
       },
       "geometry": {
@@ -212,7 +633,8 @@ export const uniFacility = {
           27.56195020894404
         ],
         "type": "Point"
-      }
+      },
+      "id": 19
     },
     {
       "type": "Feature",
@@ -308,7 +730,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "AJ-17B, 17B",
+        "name": "17B",
         "firstFloor": 1,
         "id": 17
       },
@@ -379,7 +801,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "AJ-CL2, CL2",
+        "name": "CL2",
         "firstFloor": 0,
         "id": 19
       },
@@ -415,7 +837,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "AJ-CL1, CL1",
+        "name": "CL1",
         "firstFloor": 0,
         "id": 20
       },
@@ -487,7 +909,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "AJ-11D",
+        "name": "11D",
         "firstFloor": 0,
         "id": 22
       },
@@ -558,7 +980,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "restaurant",
-        "name": "",
+        "name": "فطيرتي",
         "id": 24
       },
       "geometry": {
@@ -567,7 +989,8 @@ export const uniFacility = {
           27.563460071190363
         ],
         "type": "Point"
-      }
+      },
+      "id": 33
     },
     {
       "type": "Feature",
@@ -753,7 +1176,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "MD-15, 15",
+        "name": 15,
         "firstFloor": 0,
         "id": 30
       },
@@ -789,7 +1212,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "MD-16, 16",
+        "name": 16,
         "firstFloor": 0,
         "id": 31
       },
@@ -825,7 +1248,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "AJ-17A, 17A",
+        "name": "17A",
         "firstFloor": 1,
         "id": 32
       },
@@ -897,7 +1320,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "AJ-17C, 17C",
+        "name": "17C",
         "firstFloor": 1,
         "id": 34
       },
@@ -933,7 +1356,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "AJ-17D, 17D",
+        "name": "17D",
         "firstFloor": 1,
         "id": 35
       },
@@ -969,7 +1392,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "AJ-17E, 17E",
+        "name": "17E",
         "firstFloor": 1,
         "id": 36
       },
@@ -1005,7 +1428,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "AJ-17F, 17F",
+        "name": "17F",
         "firstFloor": 1,
         "id": 37
       },
@@ -1041,7 +1464,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "PH-18, 18",
+        "name": 18,
         "firstFloor": 0,
         "id": 38
       },
@@ -1077,7 +1500,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "PH-19, 19",
+        "name": 19,
         "firstFloor": 0,
         "id": 39
       },
@@ -1113,7 +1536,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "20",
+        "name": 20,
         "firstFloor": 1,
         "id": 40
       },
@@ -1149,7 +1572,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "NR-21, 21",
+        "name": 21,
         "firstFloor": 1,
         "id": 41
       },
@@ -1185,7 +1608,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "HS-22, 22",
+        "name": 22,
         "firstFloor": 1,
         "id": 42
       },
@@ -1221,7 +1644,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "DN-23A, 23A",
+        "name": "23A",
         "firstFloor": 0,
         "id": 43
       },
@@ -1257,7 +1680,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "AJ-24, 24",
+        "name": 24,
         "firstFloor": 0,
         "id": 44
       },
@@ -1293,7 +1716,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "AJ-26, 26",
+        "name": " 26",
         "firstFloor": 0,
         "id": 45
       },
@@ -1428,7 +1851,232 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      }
+      },
+      "id": 57
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "building",
+        "name": "القبول والتسجيل",
+        "id": 59
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              41.701291096992605,
+              27.5626898052015
+            ],
+            [
+              41.70124307265132,
+              27.562384692384754
+            ],
+            [
+              41.70168329577524,
+              27.56231373579479
+            ],
+            [
+              41.701731320116636,
+              27.562590466237538
+            ],
+            [
+              41.701291096992605,
+              27.5626898052015
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "building",
+        "name": "قاعة المؤتمرات",
+        "id": 60
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              41.700594744051244,
+              27.56459141945463
+            ],
+            [
+              41.70053071159688,
+              27.56431469405632
+            ],
+            [
+              41.70145117812851,
+              27.564179878865303
+            ],
+            [
+              41.70151521058284,
+              27.564435318033702
+            ],
+            [
+              41.700594744051244,
+              27.56459141945463
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "parking",
+        "name": "الباصات",
+        "id": 61
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              41.701731320116636,
+              27.564683661100005
+            ],
+            [
+              41.70154722681005,
+              27.563896056869893
+            ],
+            [
+              41.70260376230689,
+              27.563789623432186
+            ],
+            [
+              41.70277184749932,
+              27.564520464291107
+            ],
+            [
+              41.701731320116636,
+              27.564683661100005
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "buliding",
+        "name": "عمادة الجودة",
+        "id": 62
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              41.70195543370684,
+              27.562107961422242
+            ],
+            [
+              41.70189940530901,
+              27.561802846989238
+            ],
+            [
+              41.70216353918292,
+              27.561760272814325
+            ],
+            [
+              41.70219555541013,
+              27.562079578719988
+            ],
+            [
+              41.70195543370684,
+              27.562107961422242
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": 61
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "cafe",
+        "name": "First cafe",
+        "id": 63
+      },
+      "geometry": {
+        "coordinates": [
+          41.69598195497127,
+          27.563981153660947
+        ],
+        "type": "Point"
+      },
+      "id": 62
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "breakRoom",
+        "name": "استراحة طالبات الدور الاول",
+        "id": 64
+      },
+      "geometry": {
+        "coordinates": [
+          41.695398540702655,
+          27.56321089855895
+        ],
+        "type": "Point"
+      },
+      "id": 63
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "breakRoom",
+        "name": "استراحة طالبات الدور الاول",
+        "id": 65
+      },
+      "geometry": {
+        "coordinates": [
+          41.69569319852678,
+          27.564570679239054
+        ],
+        "type": "Point"
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "mosque",
+        "name": "مصلى الدور الاول",
+        "id": 66
+      },
+      "geometry": {
+        "coordinates": [
+          41.696880064716,
+          27.56442047469045
+        ],
+        "type": "Point"
+      },
+      "id": 65
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "mosque",
+        "name": "مصلى الدور الثاني",
+        "id": 67
+      },
+      "geometry": {
+        "coordinates": [
+          41.69756116369638,
+          27.564569005577113
+        ],
+        "type": "Point"
+      },
+      "id": 66
     }
   ]
 }

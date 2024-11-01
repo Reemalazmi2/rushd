@@ -1,5 +1,5 @@
-.Main-sec{
-    background-color: rgb(174, 230, 255);
+.Main-sec {
+    background-color: rgb(237 241 244);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -10,82 +10,81 @@
     z-index: 10;
 }
 
-.top-section{
+.top-section {
     display: flex;
-    justify-content:center; 
+    justify-content: center;
 }
 
-.Searchbar{
+.Searchbar {
     margin-top: -2.5vh;
-    width: 50%;
+    width: 65%;
     height: 6vh;
     border-radius: 10px;
     border: 2px solid lightgray;
     font-size: 20px;
     padding-left: 2%;
     z-index: 12;
+    max-width: 1000px;
 }
-
 
 ul {
     list-style-type: none;
     background-color: #f9f9f9;
-    border-radius: 5px; 
-    z-index: 11; 
+    border-radius: 5px;
+    z-index: 11;
     width: 52.5%;
     position: absolute;
     margin-top: 4.4vh;
     padding: 0;
-    max-height: 25vh; 
-    overflow-y: auto; 
+    max-height: 25vh;
+    overflow-y: auto;
 }
 
 li {
-    padding: 10px; /* إضافة تباعد داخلي */
-    border-bottom: 1px solid #ccc; /* خط أسفل كل عنصر */
-    transition: background-color 0.3s; /* تأثير عند التمرير */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s;
 }
 
 li:hover {
-    background-color: #e0e0e0; /* تغيير لون الخلفية عند التمرير */
+    background-color: #e0e0e0;
 }
 
 li:last-child {
-    border-bottom: none; /* إزالة الحدود السفلية من آخر عنصر */
+    border-bottom: none;
 }
 
-.bottom-section{ 
+.bottom-section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 0% 5% 5% 5%;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    padding-top: 46px;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
 }
 
-.facility-button{
+.facility-button {
     background-color: rgba(240, 248, 255, 0);
     border: none;
     cursor: pointer;
-    width: 10%;
-    margin-bottom: 6%;
-    margin-top: 10%;
+    width: 100%; 
+    margin-bottom: 4%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.facility-icon{
+.facility-icon {
     height: 8vh;
 }
 
-.icon-title{
+.icon-title {
     font-size: 140%;
     white-space: nowrap;
 }
 
-.map{
+.map {
     position: absolute;
     top: 0;
     right: 0;
@@ -97,23 +96,25 @@ li:last-child {
     z-index: 1;
 }
 
-.findMecss{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    left: 77%;
-    top: -15%;
-    width: 9%;
+.findMecss {
+    position: fixed; /* جعلها ثابتة */
+    margin-top: 70px;
+    margin-left: 18px;
+    transform: translateX(-50%); /* توسيط الزر */    
+    width: 31px;
+    height: 25px;
     z-index: 100;
     background-color: white;
-    border: 2px solid lightgray;
+    border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
 
-.arrow-direction{
-    height: 90%;
-    width: 90%;
+.arrow-direction {
+    width: 88%;
+    padding-top: 3px;
+
 }
 
+.leaflet-routing-container {
+display: none;
+} 

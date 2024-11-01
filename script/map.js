@@ -1,7 +1,8 @@
 import { uniFacility } from '../data/AJData.js';
 import { facilities } from '../data/facility.js';
-import { routing, routeToDestination } from './userlocation.js';
+import { routing } from './userlocation.js';
 
+// تجهيز الخريطة
 export const map = L.map('map').setView([27.563073576201173, 41.700262995401836],16.4);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/{z}/{x}/{y}?access_token=' + 'pk.eyJ1IjoicmVlbWFsYXptaSIsImEiOiJjbTJqZ2lvM3gwNTM2Mm1yMWdxY3Q5YThkIn0.VtsPhjheCaixoSNbnk2siw', {
@@ -12,6 +13,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/{z}/{x}/
 
 let markersArray = [];
 
+// دالة لصنع زر 
 function createButton(label, container) {
   var btn = L.DomUtil.create('button', '', container);
   btn.setAttribute('type', 'button');
@@ -19,6 +21,7 @@ function createButton(label, container) {
   return btn;
 }
 
+//دالة لاضافة الاماكن للخريطة
 function addGeoJson(filteredFeatures) {
   // إزالة الطبقات السابقة من الخريطة
   map.eachLayer(layer => {
@@ -27,17 +30,18 @@ function addGeoJson(filteredFeatures) {
     }
   });
 
+  //اضافة المبنى للخريطة
   const geojsonLayer = L.geoJSON({
     type: 'FeatureCollection',
     features: filteredFeatures
   }).addTo(map);
 
   geojsonLayer.eachLayer(function(layer) {
+    // اضافة النافذة المنبثقة والتوجية للنقاط
     if (layer instanceof L.Marker) {
       markersArray.push(layer);
       
-      // إعداد النافذة المنبثقة باستخدام id كمعرف فريد
-      const featureName = layer.feature.properties.name; // تأكد من أن لديك خاصية id
+      const featureName = layer.feature.properties.name; 
       layer.on('click', function(e) {
         let container = L.DomUtil.create('div');
       
@@ -48,10 +52,10 @@ function addGeoJson(filteredFeatures) {
         // إضافة زر
         let actionBtn = createButton('اذهب', container);
         
-        // ربط حدث الزر
+        // ربط حدث الزر لتشغيل التوجية
         L.DomEvent.on(actionBtn, 'click', () => {
-          routing(layer.feature); // تأكد من أن هذه الدالة موجودة
-          map.closePopup(); // إغلاق النافذة المنبثقة بعد النقر
+          routing(layer.feature); 
+          map.closePopup(); 
         });
 
         // فتح النافذة المنبثقة
@@ -60,9 +64,11 @@ function addGeoJson(filteredFeatures) {
           .setLatLng(e.latlng)
           .openOn(map);
       });
+      
+      // اضافة النافذة المنبثقة والتوجية للمضلعات
     } else if (layer instanceof L.Polygon) {
-      // إعداد النافذة المنبثقة عند الضغط على المضلع
-      layer.on('click', function(e) {
+      
+        layer.on('click', function(e) {
         let container = L.DomUtil.create('div');
 
         // إضافة نص
@@ -72,10 +78,10 @@ function addGeoJson(filteredFeatures) {
         // إضافة زر
         let actionBtn = createButton('اذهب', container);
 
-        // ربط حدث الزر
+        // ربط حدث الزر لتشغيل التوجية
         L.DomEvent.on(actionBtn, 'click', () => {
-          routing(layer.feature); // تمرير الميزة إلى دالة التوجيه
-          map.closePopup(); // إغلاق النافذة المنبثقة بعد النقر
+          routing(layer.feature); 
+          map.closePopup(); 
         });
 
         // فتح النافذة المنبثقة
@@ -86,8 +92,6 @@ function addGeoJson(filteredFeatures) {
       });
     }
   });
-
-  console.log(markersArray);
 
   const geometryType = filteredFeatures[0].geometry.type;
   
@@ -99,13 +103,13 @@ function addGeoJson(filteredFeatures) {
 
 }
 
+// دالة البحث عن المباني باستخدام الازارا المعروضة
 function LookForFacility() {
   document.querySelectorAll('.js-look-for-facility')
     .forEach((button) => {
       button.addEventListener('click', () => {
         const facilityId = button.getAttribute('data-facility-id'); 
 
-        // فلترة الميزات بناءً على id المختار
         const filteredFeatures = uniFacility.features.filter(feature => {
           return feature.properties.facility === facilityId;
         });
@@ -119,29 +123,28 @@ function LookForFacility() {
     
 }
 
-// استدعاء الوظيفة
 LookForFacility();
 
+// البحث عن مبنى باستعمال خانة البحث
 function renderFacilities(facilities) {
   const searchList = document.getElementById('searchList');
-  searchList.innerHTML = '';// مسح القائمة السابقة
+  searchList.innerHTML = '';
   facilities.forEach((facility) => {
       const li = document.createElement('li');
-      li.textContent = facility.properties.name; // إضافة اسم المرفق إلى القائمة
+      li.textContent = facility.properties.name;
       li.onclick = function() {
         showBuilding(facility);
         searchList.innerHTML= '';
         searchInput.value = '';
       };
-      searchList.appendChild(li); // التأكد من أن searchList هو عنصر صالح
+      searchList.appendChild(li);
   });
 }
 
-
+// عرض المبنى عند الضغط على نتائج البحث
 function showBuilding(facility) {
   const facilityId = facility.properties.id;
 
-  // تصفية الميزات بناءً على الـ id
   const filteredFeatures = uniFacility.features.filter(feature => {
       return feature.properties.id === facilityId;
   });
@@ -152,24 +155,22 @@ function showBuilding(facility) {
 
 }
 
-
+// تفعيل البحث 
 document.addEventListener('DOMContentLoaded', () => {
-  // لا تعرض أي مرافق عند التحميل
 
-  // إضافة مستمع للبحث
   const searchInput = document.getElementById('searchInput')
     .addEventListener('keyup', function() {
-      const searchValue = this.value.toLowerCase(); // الحصول على قيمة البحث وتحويلها إلى حروف صغيرة
+      const searchValue = this.value.toLowerCase(); 
 
       if (searchValue) {
             const filteredFacilities = uniFacility.features.filter( facility => {
-              const facilityName = facility.properties.name; // الحصول على الاسم
+              const facilityName = facility.properties.name; 
               return typeof facilityName === 'string' && facilityName.toLowerCase().includes(searchValue);
 
           });
-          renderFacilities(filteredFacilities); // إعادة عرض المرافق المفلترة
+          renderFacilities(filteredFacilities); 
       } else {
-          renderFacilities([]); // عرض قائمة فارغة إذا كان حقل البحث فارغًا
+          renderFacilities([]);
       }
     });
 });

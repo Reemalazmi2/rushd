@@ -1,40 +1,36 @@
 import { map } from './map.js';
 
-
+// دالة الحصول على موقع المستخدم
 export function userlocation() {
   return new Promise((resolve) => {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition((position) => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
         const userLat = position.coords.latitude;
         const userLon = position.coords.longitude;
 
-        // تعيين موقع المستخدم على الخريطة
         const marker = L.marker([userLat, userLon]).addTo(map);
-        marker.bindPopup('You are here!').openPopup();
+        marker.bindPopup('انت هنا').openPopup();
 
-        // تحريك الخريطة إلى موقع المستخدم
         map.setView([userLat, userLon], 16);
 
         resolve({ lat: userLat, lon: userLon });
-    }, () => {
+      }, () => {
         alert(`لا يمكن الوصول لموقعك
           الرجاء التأكد من تفعيل الوصول للموقع من الاعدادات`);
-    });
-  }
+      });
+    }
   })
 }
 userlocation();
 
+// للرجوع لموقع العميل عند الضغط
 document.getElementById('findMe').addEventListener('click', () => {
   userlocation();
 });
 
-//routing//////////////////////////////////////////////////////////////////////////////////////
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////
 let currentRoute;
 
+// التوجية
 export function routeToDestination(userLat, userLon, destinationLat, destinationLon) {
     if (currentRoute) {
       map.removeControl(currentRoute);
@@ -47,22 +43,20 @@ export function routeToDestination(userLat, userLon, destinationLat, destination
       ],
       routeWhileDragging: true,
       geocoder: L.Control.Geocoder.nominatim(),
-      createMarker: function() { return null; },
       router: L.Routing.mapbox('pk.eyJ1IjoicmVlbWFsYXptaSIsImEiOiJjbTJqZ2lvM3gwNTM2Mm1yMWdxY3Q5YThkIn0.VtsPhjheCaixoSNbnk2siw', {
-        profile: 'mapbox/walking' // طريقة التنقل: المشي
+        // طريقة التنقل: المشي
+        profile: 'mapbox/walking'
+       
       })
-        // استخدام نمط المشي
-
-        // اذا ما اشتغل احذفي walking
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      }).addTo(map);
+      
+    }).addTo(map);
 }
 
 
+// اخذ احداثيات التوجية
 export function routing(selectedFeature) {
-  let shapes = []; // مصفوفة لتخزين النقاط أو المضلعات
+  let shapes = []; 
 
-  // تحقق من طول selectedFeature
   if (selectedFeature) {
     const geometry = selectedFeature.geometry;
     const properties = selectedFeature.properties;
@@ -80,7 +74,7 @@ export function routing(selectedFeature) {
         });
     } else if (geometry.type === 'Polygon') {
         const id = properties.id;
-        const coordinates = geometry.coordinates[0]; // الزوايا الأولى من المضلع
+        const coordinates = geometry.coordinates[0]; 
 
         // حساب نقطة الوسط
         const center = coordinates.reduce((acc, coord) => {
@@ -95,7 +89,7 @@ export function routing(selectedFeature) {
             lon: center.lon / numCoords,
             type: 'Polygon',
             id: id, 
-            coordinates: coordinates // تأكد من إضافة الإحداثيات هنا
+            coordinates: coordinates 
         });
     }
       
@@ -113,10 +107,9 @@ export function routing(selectedFeature) {
             });
 
         } else if (shape.type === 'Polygon') {
-        if (shape.coordinates && shape.coordinates.length > 0) { // تحقق من وجود الإحداثيات
-            // تأكد من أن الإحداثيات صحيحة
-            const latLngs = shape.coordinates.map(coord => [coord[1], coord[0]]);
+        if (shape.coordinates && shape.coordinates.length > 0) { 
 
+            const latLngs = shape.coordinates.map(coord => [coord[1], coord[0]]);
             const polygon = L.polygon(latLngs).addTo(map);
 
             userlocation().then((userCoords) => {
@@ -128,10 +121,4 @@ export function routing(selectedFeature) {
     }
     });
 
-  console.log(shapes);
 }
-
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////
-
