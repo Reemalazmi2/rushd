@@ -5,7 +5,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "ادارة مجمع اجا للطالبات",
+        "name": "3",
         "id": 58
       },
       "geometry": {
@@ -58,7 +58,8 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      }
+      },
+      "id": 0
     },
     {
       "type": "Feature",
@@ -664,7 +665,8 @@ export const uniFacility = {
           27.56527807609777
         ],
         "type": "Point"
-      }
+      },
+      "id": 21
     },
     {
       "type": "Feature",
@@ -766,7 +768,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "stadium",
-        "name": "كره السلة , كره الطائرة",
+        "name": "ملعب كرة السلة",
         "id": 18
       },
       "geometry": {
@@ -980,7 +982,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "restaurant",
-        "name": "فطيرتي",
+        "name": "كافتيريا فطيرتي",
         "id": 24
       },
       "geometry": {
@@ -1032,7 +1034,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "SC-F B, 14B",
+        "name": "SC-F B or 14B",
         "firstFloor": 0,
         "id": 26
       },
@@ -1068,7 +1070,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "SC-F C, 14C",
+        "name": "SC-F C or14C",
         "firstFloor": 0,
         "id": 27
       },
@@ -1104,7 +1106,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "SC-F D, 14D",
+        "name": "SC-F D or 14D",
         "firstFloor": 0,
         "id": 28
       },
@@ -1140,7 +1142,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "SC-F E, 14E",
+        "name": "SC-F E or 14E",
         "firstFloor": 0,
         "id": 29
       },
@@ -1278,7 +1280,8 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      }
+      },
+      "id": 41
     },
     {
       "type": "Feature",
@@ -1350,7 +1353,8 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      }
+      },
+      "id": 43
     },
     {
       "type": "Feature",
@@ -1422,7 +1426,8 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      }
+      },
+      "id": 45
     },
     {
       "type": "Feature",
@@ -1458,7 +1463,8 @@ export const uniFacility = {
           ]
         ],
         "type": "Polygon"
-      }
+      },
+      "id": 46
     },
     {
       "type": "Feature",
@@ -1752,7 +1758,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "play",
-        "name": "الصالة الترفيهيه",
+        "name": "الصالة الترفيهية",
         "id": 46
       },
       "geometry": {
@@ -1787,7 +1793,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "stadium",
-        "name": "كره القدم",
+        "name": "ملعب كرة القدم",
         "id": 47
       },
       "geometry": {
@@ -1822,7 +1828,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "building",
-        "name": "ADMIN, قاعه التحضيري",
+        "name": "ADMIN or قاعه التحضيري",
         "id": 48
       },
       "geometry": {
@@ -2002,7 +2008,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "cafe",
-        "name": "First cafe",
+        "name": "Coffee First cafe",
         "id": 63
       },
       "geometry": {
@@ -2018,23 +2024,7 @@ export const uniFacility = {
       "type": "Feature",
       "properties": {
         "facility": "breakRoom",
-        "name": "استراحة طالبات الدور الاول",
-        "id": 64
-      },
-      "geometry": {
-        "coordinates": [
-          41.695398540702655,
-          27.56321089855895
-        ],
-        "type": "Point"
-      },
-      "id": 63
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "facility": "breakRoom",
-        "name": "استراحة طالبات الدور الاول",
+        "name": "109 استراحة طالبات الدور الاول",
         "id": 65
       },
       "geometry": {
@@ -2045,22 +2035,6 @@ export const uniFacility = {
         "type": "Point"
       },
       "id": 64
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "facility": "mosque",
-        "name": "مصلى الدور الاول",
-        "id": 66
-      },
-      "geometry": {
-        "coordinates": [
-          41.696880064716,
-          27.56442047469045
-        ],
-        "type": "Point"
-      },
-      "id": 65
     },
     {
       "type": "Feature",
@@ -2077,6 +2051,294 @@ export const uniFacility = {
         "type": "Point"
       },
       "id": 66
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "restaurant",
+        "name": "بوفية نقصة سين للوجبات",
+        "id": 68
+      },
+      "geometry": {
+        "coordinates": [
+          41.69047732851581,
+          27.564392973895465
+        ],
+        "type": "Point"
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "restaurant",
+        "name": "McDonald's",
+        "id": 69
+      },
+      "geometry": {
+        "coordinates": [
+          41.69444571810908,
+          27.567489970700564
+        ],
+        "type": "Point"
+      },
+      "id": 68
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "cafe",
+        "name": "Pick up",
+        "id": 71
+      },
+      "geometry": {
+        "coordinates": [
+          41.69454533288257,
+          27.564480425600905
+        ],
+        "type": "Point"
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "cafe",
+        "name": "Under curve",
+        "id": 70
+      },
+      "geometry": {
+        "coordinates": [
+          41.69447272825511,
+          27.56405172186315
+        ],
+        "type": "Point"
+      },
+      "id": 70
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "gate",
+        "name": "بوابة 2",
+        "id": 72
+      },
+      "geometry": {
+        "coordinates": [
+          41.700453241924464,
+          27.56487383725893
+        ],
+        "type": "Point"
+      },
+      "id": 71
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "restaurant",
+        "name": "كافتيريا فطيرتي",
+        "id": 73
+      },
+      "geometry": {
+        "coordinates": [
+          41.69962792897928,
+          27.562501001937903
+        ],
+        "type": "Point"
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "mosque",
+        "name": "مصلى الدور الثاني 106",
+        "id": 74
+      },
+      "geometry": {
+        "coordinates": [
+          41.69815792549164,
+          27.56312110225994
+        ],
+        "type": "Point"
+      },
+      "id": 73
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "mosque",
+        "name": "مصلى الدور الثالث بين المبنيين",
+        "id": 75
+      },
+      "geometry": {
+        "coordinates": [
+          41.697416562285184,
+          27.562480557087895
+        ],
+        "type": "Point"
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "breakRoom",
+        "name": "استراحة طالبات الدور الثالث",
+        "id": 76
+      },
+      "geometry": {
+        "coordinates": [
+          41.695664757900204,
+          27.564446731888495
+        ],
+        "type": "Point"
+      },
+      "id": 75
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "breakRoom",
+        "name": "استراحة طالبات الدور الثاني 108",
+        "id": 77
+      },
+      "geometry": {
+        "coordinates": [
+          41.69812594169235,
+          27.562985240749327
+        ],
+        "type": "Point"
+      },
+      "id": 76
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "breakRoom",
+        "name": "استراحة طالبات الدور الثالث 207",
+        "id": 78
+      },
+      "geometry": {
+        "coordinates": [
+          41.698244053064,
+          27.56350571112992
+        ],
+        "type": "Point"
+      },
+      "id": 77
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "breakRoom",
+        "name": "استراحة طالبات الدور الثاني 107",
+        "id": 79
+      },
+      "geometry": {
+        "coordinates": [
+          41.697175609519434,
+          27.56431756300921
+        ],
+        "type": "Point"
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "breakRoom",
+        "name": "استراحة طالبات الدور الثالث 202",
+        "id": 80
+      },
+      "geometry": {
+        "coordinates": [
+          41.69696540664057,
+          27.5632101216016
+        ],
+        "type": "Point"
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "breakRoom",
+        "name": "استراحة طالبات الدور الثاني 103",
+        "id": 81
+      },
+      "geometry": {
+        "coordinates": [
+          41.69730970233289,
+          27.56249144419644
+        ],
+        "type": "Point"
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "mosque",
+        "name": "101 مصلى الدور الاول",
+        "id": 66
+      },
+      "geometry": {
+        "coordinates": [
+          41.69682531339106,
+          27.564143897826355
+        ],
+        "type": "Point"
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "breakRoom",
+        "name": "استراحة طالبات الدور الثالث 308",
+        "id": 82
+      },
+      "geometry": {
+        "coordinates": [
+          41.69686952558732,
+          27.564395616106992
+        ],
+        "type": "Point"
+      },
+      "id": 81
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "breakRoom",
+        "name": "استراحة طالبات الدور الثاني 202",
+        "id": 83
+      },
+      "geometry": {
+        "coordinates": [
+          41.696059971997585,
+          27.562695404828105
+        ],
+        "type": "Point"
+      },
+      "id": 82
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "facility": "breakRoom",
+        "name": "009 استراحة طالبات الدور الاول",
+        "id": 64
+      },
+      "geometry": {
+        "coordinates": [
+          41.6955113828175,
+          27.563695331834282
+        ],
+        "type": "Point"
+      },
+      "id": 83
     }
   ]
 }
